@@ -12,6 +12,7 @@ body {
 }
 
 .tbtn {
+    -webkit-tap-highlight-color: transparent;
     user-select: none;
     width: 5rem;
     height: 5rem;
@@ -29,4 +30,4 @@ body {
     background: radial-gradient(circle, #ffcccc 0%, #ffffff 100%);
     box-shadow: inset 1px -2px 5px 2px #ffcccc, -5px 6px 8px 0px #ffccccd0;
 }
-    
+
