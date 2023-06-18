@@ -1,0 +1,32 @@
+body {
+    background-color: #eee;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container > * {
+    margin: 1rem;
+}
+
+.tbtn {
+    user-select: none;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffffff 20%, #ffcccc 100%);
+    box-shadow: inset 1px -2px 5px 2px #ffcccc, -7px 8px 8px 0px #ffccccd0;
+    cursor: pointer;
+}
+
+.tbtn:hover {
+    background: radial-gradient(circle, #ffffff 10%, #ffcccc 100%);
+    box-shadow: inset 1px -2px 5px 2px #ffcccc, -7px 8px 8px 0px #ffccccd0;
+}
+.tbtn:active {
+    background: radial-gradient(circle, #ffcccc 0%, #ffffff 100%);
+    box-shadow: inset 1px -2px 5px 2px #ffcccc, -5px 6px 8px 0px #ffccccd0;
+}
+    
