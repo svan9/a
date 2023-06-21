@@ -4,8 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="slideswitcher.ll.js"></script>
+        <script src="colorpicker.js"></script>
         <script src="main.js" defer></script>
         <link rel="stylesheet" href="main.css" />
+        
         <link
             rel="shortcut icon"
             href="https://raw.githubusercontent.com/svan9/info/master/cat.ico"
@@ -14,6 +17,26 @@
         <title>pup</title>
     </head>
     <body>
-        <div class="container"></div>
+        <!-- buttons -->
+        <!-- pop -->
+        <div class="container" style="--tbtn-1-: #ffffff; --tbtn-2-: #ffcccc">
+            <div class="tbtn"></div>
+            <div class="color" style="margin-top: 1rem;">
+                <span></span>
+                <div></div>
+                <input type="color" />
+            </div>
+        </div>
+        <!-- radio -->
+        <!-- <div class="container">
+            <div class="trdbtn">
+                <input type="checkbox" />
+                <span></span>
+            </div>
+        </div> -->
+
+        <div class="container" id="slider">
+
+        </div>
     </body>
 </html>

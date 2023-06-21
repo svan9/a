@@ -1,14 +1,45 @@
 body {
     background-color: #eee;
-}
-
-.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.container > * {
-    margin: 1rem;
+
+.color {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    --color: var(--tbtn-2-);
+}
+.color:hover > div {
+    transform: translateY(0.35rem);
+}
+.color > div {
+    transform: translateY(0rem);
+    position: absolute;
+    background-color: var(--color);
+    width: 2rem;
+    height: 0.5rem;
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
+    transition: transform 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.color > span {
+    position: absolute;
+    background-color: var(--color);
+    width: 5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+}
+.color > input[type="color"] {
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+    width: 5rem;
+    height: 1rem;
+}
+
+.container {
+    margin: 2rem 3rem ;
 }
 
 .tbtn {
@@ -16,18 +47,71 @@ body {
     user-select: none;
     width: 5rem;
     height: 5rem;
+    border: 0;
     border-radius: 50%;
-    background: radial-gradient(circle, #ffffff 20%, #ffcccc 100%);
-    box-shadow: inset 1px -2px 5px 2px #ffcccc, -7px 8px 8px 0px #ffccccd0;
+    background: radial-gradient(
+        circle,
+        var(--tbtn-1-) 20%,
+        var(--tbtn-2-) 100%
+    );
+    box-shadow: inset 1px -2px 5px 2px var(--tbtn-2-),
+        -7px 8px 8px 0px var(--tbtn-2-);
     cursor: pointer;
 }
 
 .tbtn:hover {
-    background: radial-gradient(circle, #ffffff 10%, #ffcccc 100%);
-    box-shadow: inset 1px -2px 5px 2px #ffcccc, -7px 8px 8px 0px #ffccccd0;
+    background: radial-gradient(
+        circle,
+        var(--tbtn-1-) 10%,
+        var(--tbtn-2-) 100%
+    );
+    box-shadow: inset 1px -2px 5px 2px var(--tbtn-2-),
+        -7px 8px 8px 0px var(--tbtn-2-);
 }
 .tbtn:active {
-    background: radial-gradient(circle, #ffcccc 0%, #ffffff 100%);
-    box-shadow: inset 1px -2px 5px 2px #ffcccc, -5px 6px 8px 0px #ffccccd0;
+    background: radial-gradient(circle, var(--tbtn-2-) 0%, var(--tbtn-1-) 100%);
+    box-shadow: inset 1px -2px 5px 2px var(--tbtn-2-),
+        -5px 6px 8px 0px var(--tbtn-2-);
 }
 
+/* .trdbtn > input[type="checkbox"]:checked  {
+    transform: translateX(2rem);
+} */
+.trdbtn > input[type="checkbox"] {
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: -1;
+}
+.trdbtn.checked > span::before {
+    transform: translateX(2rem);
+}
+
+.trdbtn > span {
+    display: block;
+    background-color: transparent;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 2px solid var(--tbtn-2-);
+}
+.trdbtn > span::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: var(--tbtn-2-);
+    margin: 0.1rem;
+    transition: 0.25s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.trdbtn {
+    --tbtn-1-: #ffffff;
+    --tbtn-2-: #ffcccc;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+}
