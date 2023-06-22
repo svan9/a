@@ -5,6 +5,10 @@ body {
     flex-wrap: wrap;
 }
 
+div, span {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .color {
     display: flex;
     align-items: center;
@@ -49,11 +53,7 @@ body {
     height: 5rem;
     border: 0;
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        var(--tbtn-1-) 0%,
-        var(--tbtn-2-) 100%
-    );
+    background: radial-gradient(circle, var(--tbtn-1-) 0%, var(--tbtn-2-) 100%);
     box-shadow: inset 1px -2px 5px 2px var(--tbtn-2-),
         -7px 8px 8px 0px var(--tbtn-2-);
     cursor: pointer;
