@@ -88,8 +88,14 @@ span {
     overflow: hidden;
     border-left: 1px solid #ffffff00;
     border-right: 1px solid #ffffff00;
-    /* box-shadow: inset 1px 1px 4px 4px #5f5f5f; */
+    opacity: 1;
+    transition: opacity 0.5s;
 }
+
+#switcher[state="off"] {
+    opacity: 0.75;
+}
+
 #switcher > * {
     width: 100%;
     position: relative;
