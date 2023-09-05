@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900');
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(220, 10%, 10%);
+}
+
+.file {
+  --accent-color: hsl(0, 0%, 30%);
+  --size: 10rem;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--size);
+  height: var(--size);
+
+  font-family: 'Poppins', sans-serif;
+
+  background-color: hsl(220, 100%, 90%, 0.01);
+}
+
+.file input[type=file] {
+  position: absolute;
+
+  width: var(--size);
+  height: var(--size);
+
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.file canvas {
+  position: absolute;
+
+  width: var(--size);
+  height: var(--size);
+
+  border: 2px dashed var(--accent-color);
+}
+
+.file label {
+  position: absolute;
+
+  color: var(--accent-color);
+}
+
+.file a {
+ font-size: 1.2rem;
+}
+
+
+.hidden {
+  opacity: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
